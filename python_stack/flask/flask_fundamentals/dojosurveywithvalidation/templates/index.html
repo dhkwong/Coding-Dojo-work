@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title></title>
+</head>
+
+<body>
+<div class="container-fluid center bg.info">
+    <form action="/process" method="POST"><!--links to processing page that redirects to the results-->
+        <!-- text input -->
+        First name:<br><input type="text" name="name" placeholder="name"><br>
+        <!-- dropdown menu -->
+        Dojo Location: <br><select name="dropdown-location"></br>
+            <option value=""></option>
+            <option value="San Jose">San Jose</option>
+            <option value="Seattle">Seattle</option>
+        </select>
+        <br>
+        Languages: <br><select name="dropdown-language"></br>
+            <option value=""></option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+        </select>
+
+        Comments(optional):<br><input type="text" name="comments"><br>
+        <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">
+
+    </form>
+</div>
+{% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+    {% if messages %}                            <!-- check if there are any messages -->
+        {% for message in messages %}            <!-- loop through the messages -->
+            <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+</body>
+
+</html>

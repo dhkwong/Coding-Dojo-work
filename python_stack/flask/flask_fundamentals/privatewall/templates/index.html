@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title></title>
+</head>
+<div class="container-fluid text-center ">
+
+
+    <body>
+        <div class="container-fluid border border-dark bg.info">
+            <h1 class="" > Login and Registration</h1>
+            <div class="row">
+                <div class="container col-5 border border-dark bg.info">
+
+                    <h3>Register here!</h3>
+                    <form action="/processreg" method="POST" class="m-3">
+                        <!--links to processing page that redirects to the results-->
+                        First Name:<br><input type="text" name="fname_reg"><br>
+                        Last Name:<br><input type="text" name="lname_reg"><br>
+                        Email:<br><input type="text" name="email_reg"><br>
+                        Password:<br><input type="text" name="password_reg"><br>
+                        Password Confirmation:<br><input class="mb-4" type="text" name="password_reg_confirm"><br>
+                        <input class="btn btn-outline-success my-2 my-sm-0 " type="submit" value="Submit">
+                    </form>
+                    <!-- <div class="text-info text-center bg-danger" style="width: 60%; margin-left: 20%; {{session['invalid']}}"> -->
+
+                    {% with messages = get_flashed_messages() %}     
+                    {% if messages %}                            
+                    {% for message in messages %}            
+                        <p>{{message}}</p>                   
+                            {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+
+                    <!-- </div> -->
+                </div>
+                <div class=" container col-5 border border-dark bg.info">
+                    <h3>Login here!</h3>
+                    <form action="/processlogin" method="post">
+                        Email:<br><input type="text" name="email_login"><br>
+                        Password:<br><input class="mb-4" type="text" name="password_login"><br>
+                        <input class="btn btn-outline-success my-2 my-sm-0 " type="submit" value="Submit">
+                    </form>
+                    {% with messages = get_flashed_messages() %}     
+                    {% if messages %}                            
+                    {% for message in messages %}            
+                        <p>{{message}}</p>                   
+                            {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </div>
+            </div>
+        </div>
+</div>
+
+
+</body>
+
+</html>

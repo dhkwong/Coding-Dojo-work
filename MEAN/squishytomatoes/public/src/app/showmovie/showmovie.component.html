@@ -1,0 +1,29 @@
+
+<div *ngIf="movie">
+        <button (click)="deleteMovie(movie.movie)" id="toggleedit"><img class="w-75"/>Delete</button>
+
+    <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Reviewer</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Reviews</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> {{movie.movie.name}}</td>
+                    <td> {{movie.movie.rating}}</td>
+                    <td> {{movie.movie.description}}</td>
+
+                </tr>
+                <tr *ngFor="let rating of movie.movie.ratings">
+                    <td>{{rating.name}}</td>
+                    <td>{{rating.rating}}</td>
+                    <td>{{rating.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>

@@ -1,0 +1,90 @@
+*{
+ margin: 0px;
+ padding: 0px;
+}
+#wrapper{
+ overflow:auto;
+ width: 950px;
+ height: 900px;
+ background-color: #00008B;
+ margin: 0px auto;
+ padding: 20px;
+
+}
+#header{
+	padding: 20px;
+	background-color: red;
+	font-size: 30px;
+	border-radius: 7px;
+	margin: 25px;
+	color: #FAF0E6; /*linen*/
+
+}
+#underline {
+
+    text-decoration: underline;
+}
+ul li{
+	margin-left: 20px;
+    margin-right: 0px;
+    padding-left: 3px;
+    padding-right: 0px;
+
+}
+h1{
+	font-family: garamond, arial, verdana, sans-serif;
+	font-size: 20px;
+}
+#sidebar{
+	font-family: garamond, arial, verdana, sans-serif;
+	font-size: 15px;
+
+	width: 110px;
+	height: 250px;
+	background-color: #00AFFF; /*deep sky blue*/
+	margin: 20px;
+	border-radius: 7px;
+	display: inline-block;
+	vertical-align: top;
+	color: #00FFFF;
+	/*text-align: left*/;
+	padding: 30px;
+}
+#content{
+	font-family: garamond, arial, verdana, sans-serif;
+	font-size: 15px;
+	width: 660px;
+	height: 480px;
+	background-color:#2F4F4F; /*Dark slate gray*/
+	margin: 20px;
+	border-radius: 7px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 15px;
+	color: #FAF0E6;
+}
+
+#content-header{
+
+}
+#example-text{
+	display: inline
+	font-family: garamond, arial, verdana, sans-serif;
+	font-size: 15px;
+	color: #00008B;
+}
+#bottom-bar{
+vertical-align: bottom;
+ min-height: 40px;
+ width: 860px;
+ background-color: grey;
+ display: inline-block;
+ margin: 20px;
+ border-radius: 7px;
+ padding: 20px;
+
+}
+
+a{
+	color: #89CFF0; /*sky blue I think*/
+}

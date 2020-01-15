@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title></title>
+
+</head>
+
+<body>
+
+    <div class="container-fluid ">
+        <div class="row mt-2">
+            <div class="container col-6">
+                <h3>Coding Dojo Wall</h3>
+            </div>
+            <div class="container col-6 text-right">
+                <h3>Welcome, {{username[0]['first_name']}} {{username[0]['last_name']}}<a href="/d"><button
+                            class="btn border border-info text-info">Logout</button></a></h3>
+            </div>
+        </div>
+        <hr>
+
+    </div>
+    <div class="w-75 container-fluid border border-dark">
+
+        <div class="row">
+            <div class="container col-6 border border-left-0 border-top-0 border-bottom-0 border-dark ">
+                <h3 class="text-success d-inline mt-4 ml-3">{{mymessagecount[0]['COUNT(users_id)']}}</h3>
+                <h3 class="d-inline"> messages for you</h3>
+                <hr>
+                {%for message in messages %}
+                <form action="/deletemessage/{{message['id']}}">
+                    <div class="container border border-dark rounded background bg-info text-center mt-3 ml-4 mr-1"
+                        style="width: 60%; height: 150px; display: inline-block;">{{message['content']}}
+                    </div><span><input class="btn btn-outline-success mt-5" type="submit" value="Delete"></span>
+                </form>
+                {%endfor%}
+            </div>
+
+            <div class="container col-6">
+                <h3>Send Messages</h3>
+                <hr>
+                <h6 class="text-success">You have sent {{count[0]['COUNT(users_id)']}} messages so far </h5>
+
+                    {%for user in users:%}
+                    {%if not user['id'] == session['id']: %}
+                    <form action="/sendmessage" method="post">
+                        {{user['first_name']}} {{user['last_name']}}
+                        <br><input type="hidden" name="send_to" value="{{user['id']}}">
+                        <input class="mb-4" type="hidden" name="user_id" value="{{session['id']}}">
+                        <textarea class="d-inline mt-2" type="text" name="content"></textarea>
+                        <input class="btn btn-outline-success mb-5 d-inline" type="submit" value="Submit">
+                    </form>
+                    {%endif%}
+                    {%endfor%}
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

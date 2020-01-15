@@ -1,0 +1,241 @@
+*{
+	margin: 0px;
+ 	padding: 0px;
+}
+
+.wrapper{
+	width:970px;
+	min-height: 900px;
+	background-color: #265076;
+}
+#pyimg{
+	vertical-align: top;
+	padding: 30px;
+
+	width: 600px;
+	display: inline-block;
+
+}
+.text-size{ /*top div holding text size option*/
+	width: 950px;
+	height: 20px;
+	background-color: #265076;
+	text-align: right;
+	padding-right: 20px;
+	color: white;
+}
+.text-size span{
+	color: yellow;
+	text-decoration: underline;
+}
+.centersearch{ /*centers search bar*/
+	width: 300px;
+	height: 10px;
+	background-color: #444444;
+	/*margin-bottom: 10px;*/
+	display: inline-block;
+	border-radius: 7px
+}
+#search{
+	height: 50px;
+	border-radius: 7px;
+
+}
+#go{
+	height:40px;
+	width: 40px;
+	font-size: 20px;
+	border-radius: 7px;
+	color: white; 
+}
+.searchbar{
+	width: 300px;
+	height: 80px;
+	background-color: #444444;
+	display: inline-block;
+	text-align: center; /*same as with the clickable for portfolio*/
+	border-radius: 7px;
+	margin-top: 30px;
+}
+.navbar{
+	width: 960px;
+	height: 120px;
+	border: 2px;
+}
+
+.navbar ul{
+	width: 900px;
+	height: 80px;
+	background-color: #487fac;
+	text-align: center;
+	display: inline-block;
+	margin-left: 30px;
+	margin-top: 20px;
+	border-radius: 7px;
+
+	
+}
+.navbar ul li{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 18;
+	width: 70px; /*figure out how to remove space in between the nav buttons*/
+	padding: 25px;
+	display: inline-block;
+	text-align: center;
+	background-color: #487fac;
+	margin:0 auto;
+	vertical-align: center;
+	color: white;
+}
+.descriptionwrapper{
+	width: 960px;
+	height: 280px;
+	
+	display: inline-block;
+
+}
+.descriptionwrapper ul{/*description sidebar*/
+	width: 200px;
+	height: 250px;
+
+	text-align: center;
+	display: inline-block;
+	margin-left: 25px;
+	border-radius: 7px;
+	
+}
+.descriptionwrapper ul li{ /*description sidebar internal list*/
+
+	margin-left: 20px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-decoration: underline;
+    color: white;
+}
+.history{
+	
+	vertical-align: top;
+	width: 700px;
+	height: 270px;
+
+	display: inline-block;
+	text-align: center;
+}
+.history-text{
+	font-family: arial, sans-serif;
+	font-size: 15px;
+	color: white;
+	padding: 10px;
+}
+.poem{
+	width: 600px;
+	height: 160px;
+	vertical-align: top;
+	text-align: center;
+	font-family: arial, sans-serif;
+	font-size: 15px;
+	color: white;
+
+	display: inline-block;
+	padding-top: 6px;
+}
+.poem p{
+	font-family: arial, sans-serif;
+	font-size: 22px;
+	color: yellow;
+	padding-bottom: 3px;
+}
+.application-wrapper{
+	vertical-align: top;
+	width: 970px;
+	height: 240px;
+	display: inline-block;
+
+	background-color: white;
+}
+
+.getting-started{
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	width: 350px;
+	height: 200px;
+	margin-left: 70px;
+	margin-top: 10px;
+	border-top: blue solid;
+	background-color: white;
+	text-align: center;
+	vertical-align: top;
+	display: inline-block;
+	
+}
+.getting-started ul li{
+	font size:5px; 
+    list-style-position: outside;
+    color: black;
+    text-align: center;
+    padding-left: -90px;
+
+}
+.getting-started ul li span{
+	color: blue;
+}
+.getting-started ul{
+	margin-left: 100px;
+	margin-top: 10px;
+	width: 150px;
+	color: black;
+}
+.application{
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	width: 360px;
+	height: 200px;
+	margin-left: 70px;
+	margin-top: 10px;
+	border-top:blue solid;
+	background-color: white;
+	text-align: center;
+	vertical-align: top;
+	display: inline-block;
+}
+.application ul{
+	margin-left: 90px;
+	margin-top: 10px;
+	width: 190px;
+	color: black;
+}
+.application ul li{
+	font size:5px; 
+    list-style-position: outside;
+    color: black;
+}
+.application span{
+	color: blue;
+}
+h1{
+	font-family: arial, sans-serif;
+	font-size: 22px;
+}
+.footer{
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	color: #386f9f;
+	width: 965px;
+	height: 90px;
+	text-align: center;
+	padding-bottom: 8px;
+}
+.footer ul li{
+	font-family: arial, sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	color: #386f9f;
+	display: inline-block;
+	margin: 30px;
+}
+
+
+

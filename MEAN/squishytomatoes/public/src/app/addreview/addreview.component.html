@@ -1,0 +1,25 @@
+<p>addreview works!</p>
+
+<div *ngIf="replyerrors">
+    <div *ngFor="let error of replyerrors">
+        {{error}}
+    </div>
+</div>
+
+<div *ngIf="movie">
+    {{movie.movie.title}}
+<form (submit)="addReview(addreview.value)" #addreview="ngForm">
+    <input type="text" name="name" [ngModel]="newReview.name" />
+    Rating <select name="rating" [ngModel]="newReview.rating">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+    
+    <input type="text" name="description" [ngModel]="newReview.description" />
+    <input type="submit" value="Add Review" />
+    <a class="btn btn-dark rounded ml-2" routerLink="/">Cancel</a>
+</form>
+</div>

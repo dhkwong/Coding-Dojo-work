@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <title>practice</title>
+    <style>
+
+    </style>
+    <script>
+        $(document).ready(function () {
+
+            console.log("you're working with jquery!");
+            $('a').click(function () {
+                console.log('you are now leaving the page!');
+
+
+            });
+
+            $('#hide').click(function () {
+                $('p').hide();
+            });
+            $('#show').click(function () {
+                $('p').show();
+            });
+            $('h3').hover(function () {
+                console.log("now invoking the first function!")
+                // $('h2').text('this is me hovering h3');
+            }, function () {
+                console.log("now invoking the second function!")//invokes the console.log once you stop hovering
+            });
+
+            $('.append').click(function () {
+                $(".result").append("<h4>.append adds HTML!</h4>");
+
+
+            });
+
+            $("button").click(function () {
+                $("button").css('background-color', 'yellow');
+            })
+
+            $("#btn").click(function () { //dont forget your # for id!!
+
+                var ptag = $('#first-p');
+                ptag.css("background-color", "green");
+
+                alert("the button has been clicked!");
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <p id="first-p">hello all!</p>
+    <button id="btn">hello, I'm definitely not a button</button>
+    <!-- <script>
+
+        var btn = document.getElementById('btn');
+        btn.addEventListener("click", function () {
+            var ptag = document.getElementById('first-p');
+            ptag.style.backgroundColor = "green";
+             alert("hello");
+        });
+    </script> -->
+    <p>This is a paragraph1</p>
+    <p>This is a paragraph2</p>
+    <h1>this is an h1</h1>
+    <h2>this is an h2</h2>
+    <h3 style="display: inline; border: solid red;">this is an h3</h3>
+    <button id="hide">this hides paragraphs</button>
+    <button id="show">this shows paragraphs</button>
+    <a id="mylink" href="http://www.google.com">goes to google</a>
+    <button class="append">click me to see .append</button>
+    <div class="result"></div>
+
+
+</body>
+
+</html>

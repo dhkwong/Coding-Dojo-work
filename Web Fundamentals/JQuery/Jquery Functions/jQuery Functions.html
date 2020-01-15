@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+.blue{
+
+}
+
+<head>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>jQuery Function</title>
+
+<!-- .click
+.hide
+.show
+.toggle
+.slideDown
+.slideUp
+.slideToggle
+.fadeIn
+.fadeOut
+.addClass
+.before
+.after
+.append
+.html
+.attr
+.val
+.text -->
+    <style>
+        .bluebackground {
+            background-color: blue;
+            color: red;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('#hide').click(function () {
+                $('.hidebutton').hide();
+            });
+            $('#show').click(function () {
+                $('.showbutton').show();
+            });
+
+            $('#togglebtn').click(function () {
+                $('.toggle').toggle();
+            });
+            $('#slidedown').click(function () {
+                $('#cat').slideDown("slow");
+            });
+
+            $('#slideup').click(function () {
+                $('#catup').slideUp("slow");
+            });
+            $('#slideToggle').click(function () {
+                $('#cattoggle').slideToggle("slow");
+            });
+
+            $('#fadein').click(function () {
+                $('#catfadein').fadeIn("slow");
+            });
+
+            $('#fadeoutbtn').click(function () {
+                $('#catfadeout').fadeOut("slow");
+            });
+            $("#addclassbtn").click(function () {
+                $("#addclass").addClass("bluebackground");
+            })
+            $("#addbeforebtn").click(function () {
+                $("#addbefore").before("<p>adding before!</p>")
+            });
+            $("#addafterbtn").click(function () {
+                $("#addafter").after("<p>adding after!</p>")
+            });
+            $("#appendbtn").click(function () {
+                $("#append").append("<p>appending!</p>")
+            });
+            $("#htmlbtn").click(function () {
+                $("#html").html("<p>htmling!</p>") //replaces button
+            });
+            $('#attrbtn').click(function () {
+                $('#catattr').attr("width", "500");
+            });
+            $('#inputbtn').click(function () {
+                $('#inputbox').val("added val");
+            });
+            $('#textbtn').click(function () {
+                $('#textbox').text("added text");
+            });
+
+
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <div class="mt-4 ml-4 border-bottom border-primary"><button id="hide">click this to .hide!</button><span
+            class="hidebutton showbutton">Hide/show me!</span>
+        <button class=" ml-4 " id=" show">click this to .show!</button></div>
+    <div class="mt-4 ml-4"><button id="togglebtn">click me to toggle!</button><span class="toggle"
+            style="display: inline-block">Toggle me!</span></div>
+    <div class=" mt-4 ml-4">
+        <button id="slidedown">click me to slide down</button>
+        <img id="cat" style="display:none" src="cat.jpg" alt="cat" width="100" height="123">
+
+    </div>
+    <div class=" mt-4 ml-4">
+        <button id="slideup">click me to slide up</button>
+        <img id="catup" src="cat.jpg" alt="cat" width="100" height="123">
+
+    </div>
+    <div class=" mt-4 ml-4">
+        <button id="slideToggle">click me to toggle slide</button>
+        <img id="cattoggle" style="display: none;" src="cat.jpg" alt="cat" width="100" height="123">
+
+    </div>
+    <div class=" mt-4 ml-4">
+        <button id="fadein">click me to fade in</button>
+        <img id="catfadein" style="display: none;" src="cat.jpg" alt="cat" width="100" height="123">
+
+    </div>
+    <div class=" mt-4 ml-4">
+        <button id="fadeoutbtn">click me to fade out</button>
+        <img id="catfadeout" src="cat.jpg" alt="cat" width="100" height="123">
+
+    </div>
+    <div id="addclass" class="mt-4 ml-4 background background-info">
+        <button id="addclassbtn">click me to add a class</button>
+        click for blue background
+    </div>
+
+    <div id="addbefore" class="mt-4 ml-4 background background-info">
+        <button id="addbeforebtn">click me to add text before</button>
+    </div>
+
+    <div id="addafter" class="mt-4 ml-4 background background-info">
+        <button id="addafterbtn">click me to add text after</button>
+    </div>
+    <div id="append" class="mt-4 ml-4 background background-info">
+        <button id="appendbtn">click me to append</button>
+    </div>
+    <div id="html" class="mt-4 ml-4 background background-info">
+        <!--replaces div with html -->
+
+        <button id="htmlbtn">click me to add html</button>
+    </div>
+    <div class=" mt-4 ml-4">
+        <button id="attrbtn">click me to change attribute</button>
+        <img id="catattr" src="cat.jpg" alt="cat" width="100" height="123">
+    </div>
+    <div class=" mt-4 ml-4">
+        <p>input: <input id="inputbox" type="text" name="user"></p>
+        <button id="inputbtn">Set the value of the input field</button>
+    </div>
+    <div class=" mt-4 ml-4" id="textbox"><button id="textbtn">Set the value of the text</button>initial text
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

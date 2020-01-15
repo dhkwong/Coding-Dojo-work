@@ -1,0 +1,22 @@
+
+<div *ngIf="replyerrors">
+        <div *ngFor="let error of replyerrors">
+            {{error}}
+        </div>
+    </div>
+<form (submit)="submitMovie()" > <!--#newmovie="ngForm"-->
+            <h4>Submit a Movie!</h4>
+        <input type="text" name="title" [(ngModel)]="newMovie.title" placeholder="title Here" />
+        <input type="text" name="name" [(ngModel)]="newMovie.name" placeholder="Name Here" />
+        Rating <select name="rating" [(ngModel)]="newMovie.rating">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+
+        <input type="text" name="description" [(ngModel)]="newMovie.description" placeholder="Description Here" />
+        <input type="submit" value="Create Movie" />
+        <a class="btn btn-dark rounded ml-2" routerLink="/movies">Cancel</a>
+      </form>

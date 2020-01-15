@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<h1>All Pets</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            {% for one_pet in pets: %}
+            <td>{{one_pet["pet_id"]}}</td>
+            <td>Name: {{one_pet["name"]}}</td>
+            <td>Type: {{one_pet["type"]}}</td>
+        </tr>
+
+            {%endfor%}       
+            
+    </tbody>
+</table>
+<form style="text-align: center" action="/create_pet" method="POST">
+        <p>Name: <input type="text" name="name"></p>
+        <p>Type: <input type="text" name="type"></p>
+        <input type="submit" value="Add">
+</form>

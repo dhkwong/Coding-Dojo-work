@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>disappearing ninja</title>
+</head>
+
+<body>
+    <style>
+        img {
+            border: 0 none;
+            display: inline-block;
+            height: auto;
+            max-width: 24%;
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('img').click(function () {
+                $(this).hide();
+            });
+            $('#restore').click(function () {
+                $('img').show();
+            });
+
+
+
+        });
+
+    </script>
+
+    <div class="row clearfix">
+        <div id="small-img" class="center"> <!--col-xs-12 col-sm-12 col-md-12 col-lg-12 center-->
+
+
+            <img id="ninja1" src="ninja.png" class="img-responsive inline" alt="Responsive image" />
+
+
+            <img id="ninja2" src="ninja.png" class="img-responsive inline" alt="Responsive image" />
+
+
+            <img id="ninja3" src="ninja.png" class="img-responsive inline" alt="Responsive image" />
+
+            <img id="ninja4" src="ninja.png" class="img-responsive inline" alt="Responsive image" />
+
+
+            <img id="ninja5" src="ninja.png" class="img-responsive inline" alt="Responsive image" />
+
+
+            <img id="ninja6" src="ninja.png" class="img-responsive inline" alt="Responsive image" />
+
+            <img id="ninja7" src="ninja.png" class="img-responsive inline" alt="Responsive image" />
+
+
+            <img id="ninja8" src="ninja.png" class="img-responsive inline" alt="Responsive image" />
+
+
+            <button id="restore" class="btn btn-info pull-right">restore</button>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.redbox{
+    background-color: red;
+
+    width: 40px;
+    height:40px;
+    /* display: inline-block; */
+}
+
+.greenbox{
+    background-color: green;
+
+    width: 40px;
+    height:40px;
+    /* display: inline-block; */
+
+}
+
+.blackbox{
+    background-color: black;
+    width: 40px;
+    height:40px;
+    /* display: inline-block; */
+}

@@ -1,0 +1,23 @@
+<h1>Add a Friend</h1>
+
+<h1>All Friends</h1>
+    {% for one_friend in all_friends: %}
+    <p>first name: {{one_friend["first_name"]}}</p>
+    <p>last name: {{one_friend["last_name"]}}</p>
+    <p>occupation: {{one_friend["occupation"]}}</p>
+    <hr>
+    {%endfor%}
+<form action="/create_friend" method="POST">
+    <p>First Name: <input type="text" name="fname"></p>
+    <p>Last Name: <input type="text" name="lname"></p>
+    <p>Occupation: <input type="text" name="occ"></p>
+    <input type="submit" value="Add Friend">
+</form>
+{% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+    {% if messages %}                            <!-- check if there are any messages -->
+        {% for message in messages %}            <!-- loop through the messages -->
+            <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+

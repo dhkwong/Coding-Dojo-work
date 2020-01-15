@@ -1,0 +1,7 @@
+SELECT * FROM countries WHERE population <100000;
+
+INSERT INTO countries(name) values( United States of America);
+
+UPDATE countries SET name='USA' WHERE name!='USA'
+
+DELETE FROM countries WHERE name='USA'

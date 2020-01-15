@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title></title>
+</head>
+
+<div class="container-fluid ml-5 row">
+    <div class="col-10">
+        <!--header-->
+        <h1>Welcome, {{user.first_name}}</h1>
+        <hr>
+    </div>
+    <a class="text-right ml-3" href="/logout">Log out</a> <a class="text-right ml-3" href="/books">Back</a>
+    <form class="col-4 m-3 pull-right" action="/updatebook/{{book.id}}" method="POST">
+        {%csrf_token%}
+        <div class="form-group">
+
+            <input type="text" class="form-control" name="title" placeholder="Title: {{book.title}}">
+            <p>Added by: {{user.first_name}}{{user.last_name}}</p>
+            <p>Added on: {{book.created_at}}</p>
+            <p>Last Updated On: {{book.updated_at}}</p>
+
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <span><input type="text" class="form-control" name="description" placeholder="Enter Description"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+        <button class="btn-danger"><a href="/deletebook/{{book.id}}">Delete</a></button>
+    </form>
+    <div class="col-5 ml-2 mt-3 ">
+            <h1>Users Who Like This Book:</h1>
+            <ul>
+           {%for user in book.users_who_like.all %}
+            <div class="row text-center ml-5">
+                <li>{{user.first_name}} {{user.last_name}}</li>
+                {%if user.id == request.session.id%}
+                <a href="/unfavorite/{{book.id}}">Un-Favorite</a>
+                {%endif%}
+            </div>
+            {%endfor%}
+        </ul>
+        </div>
+    
+    
+    </div>

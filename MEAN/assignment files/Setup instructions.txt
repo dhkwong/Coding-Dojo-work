@@ -1,0 +1,70 @@
+sudo mongod: starts mongo server
+mongo: connects TO the server
+npm i: installs any node modules at hand
+node server.js: starts node server 
+
+-Creating a New App
+* navigate to the folder directory you want your new app to be saved in*
+ng new public
+
+-We will need to create or utilize an Express project. Using the terminal, we can create a new angular project within our Express root directory. We then need to build the Angular project (using the terminal, navigate to the Angular app's root directory and run the 
+-> ng build --watch <-command) which will create a dist folder within that directory.
+
+-As long as Express knows where we keep static files, it will serve index.html by default when we make a request to the root route. Since index.html is found in a folder within our dist folder, we just need to direct Express to find it. Do not overwrite what should be served on the root route so that it will always default to serving index.html.
+
+app.use(express.static( __dirname + '/public/dist/public' ));
+
+-Create a service
+We'll set up our service by navigating to our Angular app in our terminal and running this line:
+
+ng g s http
+
+Then check Angular->fetch data-> service for further instructions of using services. (Components + services)
+
+
+-Component info:
+
+MVC
+In an MVC (Model - View - Controller) framework, we structure our code to modularize the different jobs. Angular is an MVC Front-End Framework. So far, we've identified the files in Angular that satisfy the View and Controller roles.
+
+There are many files inside the app directory, but the three files we will be working with extensively are:
+
+app.component.css
+app.component.html
+app.component.ts
+These three files comprise a component. Notice that a component consists of the three pieces we need in order to produce a webpage: html for structure, css for styling, and TypeScript (which will be transpiled into JavaScript) for logic. This means that a component has what it needs to function independently. Each component is responsible for building a portion of our webpage. Later, we’ll talk about how we can get multiple components working together, but for now, we’ll focus on the root component.
+
+Angular displays a default welcome message when you run our app. To change that welcome message, we’ll need to find which file is housing that message.
+
+<script src="http://maps.googleapis.com/maps/api/js?key=xxxx"></script>
+
+
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import{MapComponent} from './map/map.component';
+declare var google: any;
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'public';
+  map: any;
+  @ViewChild('gmap', { static: false }) gmapElement: ElementRef;
+
+  ngAfterViewInit() {
+    console.log("gmap",this.gmapElement.nativeElement);
+    let mapProp = {
+      center: new google.maps.LatLng(18.5793, 73.8143),
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROAD
+    };
+
+     this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+
+  }
+}
+
+HTML:
+<div #gmap style="width:100%;height:400px"></div>

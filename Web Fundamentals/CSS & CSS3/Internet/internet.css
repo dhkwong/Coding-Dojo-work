@@ -1,0 +1,254 @@
+*{
+	margin: 0px;
+ 	padding: 0px;
+}
+.globe{
+	text-align: left;
+	position: absolute;
+	left: 0px;
+	width: 90px;
+	height: 90px;
+}
+.wrapper{
+	width:970px;
+	min-height: 900px;
+	background-color: white;
+
+}
+.header{
+	width: 970px;
+	height: 140px;
+	background-color: white;
+	display: inline-block;
+}
+
+.internet{
+	font-family: arial, sans-serif;
+	font-size: 30px;
+	width: 700px;
+	height: 50px;
+	vertical-align: bottom;
+	padding-top: 20px;
+	margin-left: 80px;
+
+}
+.internet span{
+	color:blue;
+}
+.www{
+	width: 965px;
+	height: 45px;
+	border: solid blue;
+	font-family: arial, sans-serif;
+	font-size: 30px;
+	text-align: left;
+	padding-top: 15px;
+	background-color: blue;
+	color: white;
+}
+
+.content-wrapper{
+	width: 970px;
+	height: 760px;
+	background-image: linear-gradient(#e4e4e4 5%, #fefefe 100%);
+}
+.sidebar-wrapper{
+	width: 190px;
+	height: 430px;
+
+	vertical-align: top;
+	display: inline-block;
+
+}
+.sidebar-top{
+	width: 190px;
+	height: 200px;
+	font-family: arial, sans-serif;
+	font-size: 13px;
+
+	vertical-align: top;
+	display: inline-block;
+	
+	border-bottom: solid rgb(128, 128, 128);
+	padding-left: 8px;
+}
+
+.sidebar-top h1{
+	font-family: arial, sans-serif;
+	font-size: 16px;
+	padding-bottom: 10px;
+	padding-top:10px;
+}
+.sidebar-top span{
+	color: red;
+}
+.sidebar-top p button{
+	margin-left: 40px;
+	margin-top: 20px;
+	padding: 2px 30px 2px 30px;
+	border-radius: 6px;
+	
+}
+.obutt{
+	background-image: linear-gradient( yellow,orange);;
+}
+.bbutt{
+	background-image:linear-gradient(rgb(90, 90, 209), blue);
+}
+.learnbutt{
+	background-image:linear-gradient(rgb(58, 58, 190), blue);
+	padding: 2px 20px 2px 20px;
+	border-radius: 6px;
+}
+.sidebar-bottom{
+	width: 190px;
+	height: 190px;
+	font-family: arial, sans-serif;
+	font-size: 20px;
+	color: whitesmoke;
+	text-align: center;
+	vertical-align: bottom;
+	margin-top: 30px;
+	background-image: url("ad_background.png");
+}
+.ninjapic{
+	width: 40px;
+	height: 60px;
+}
+.info{
+	width: 720px;
+	height: 750px;
+
+	vertical-align: top;
+	margin-left: 40px;
+	display: inline-block;
+}
+.infoheader{
+	vertical-align: top;
+	text-align: left; 
+	width: 720px;
+	height: 100px;
+	border-bottom: solid grey;
+}
+.homepic{
+	width: 20px;
+	height: 20px;
+}
+.info-left{
+	font-family: arial, sans-serif;
+	font-size: 15px;
+	color: rgb(48, 48, 167);
+	vertical-align: top;
+	text-align: left; 
+	width: 350px;
+	height: 100px;
+	display: inline-block;
+}
+.info-right{
+	vertical-align: top;
+	text-align: right; 
+	width: 350px;
+	height: 100px;
+
+	display: inline-block;	 
+}
+.info-right ul{
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	list-style-type: none;
+	padding:0px;
+	margin: 0px;
+	display: inline-block;
+}
+.phone-number{
+	font-family: arial, sans-serif;
+	font-size: 25px;
+	color: rgb(109, 109, 200);
+	font-weight: 700;
+}
+.phonepic{
+	display: inline-block;
+	height: 50px; 
+	width: 50px; 
+}
+.infocontent{
+	font-family: arial, sans-serif;
+	font-size:16px;
+	width: 720px;
+	height: 450px;
+	
+	margin-top: 7px;
+	text-align: left;
+	
+}
+.infocontent p{
+	font-family: arial, sans-serif;
+	font-size: 20px;
+	color: rgb(33, 33, 187);
+	font-weight: 600;
+}
+.infocontent img{
+	width: 300px;
+	height: 100px
+}
+.infocontent ul, .infocontent ol{
+	margin-left: 21px;
+	padding: 0px;
+}
+.infocontent ul li span, .infocontent ol li span{
+	color: blue;
+}
+.infocontent a{
+	color: blue;
+}
+.bold{
+	font-weight: 700;
+}
+.serverpic{
+	margin-left: 200px; 
+	text-align: center;
+}
+.footer{
+	font-family: arial, sans-serif;
+	font-size:16px;
+	width: 720px;
+	height: 195px;
+	border-top: solid blue;
+	border-right: solid blue;
+	border-left: solid blue;
+	text-align: left;
+}
+.footertext p{
+	/* display: inline-block; */
+	font-family: arial, sans-serif;
+	font-size: 20px;
+	color: rgb(33, 33, 187);
+	font-weight: 600;
+	padding-bottom: 7px;
+}
+.italic{
+	font-family: arial, sans-serif;
+	font-style: italic;
+}
+.footer span{
+	color: blue;
+}
+.footertext{
+	font-family: arial, sans-serif;
+	font-size: 17px;
+	margin-top: 30px;
+	margin-left: 20px;
+	width: 500px;
+	height: 100px;
+	display: inline-block;
+}
+.htmlpic{
+	height:110px; 
+	width:110px;
+	margin-left: 20px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+
+

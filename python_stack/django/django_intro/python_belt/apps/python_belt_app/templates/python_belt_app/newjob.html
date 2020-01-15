@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title></title>
+</head>
+
+<div class="container-fluid ml-2 row">
+    <div class="col-10">
+
+        <h1>Hello {{user.first_name}}! Create a job!</h1>
+    </div>
+    <a class="text-right ml-3" href="/logout">Log out</a>
+
+    <form class="border border-dark rounded col-5 m-3 pull-right p-4" action="/createjob" method="POST">
+        {%for message in messages%}
+        <p>{{message}}</p>
+        {%endfor%}
+        {%csrf_token%}
+
+        <div class="form-group mb-4">
+            <label>Title</label>
+            <input type="text" class="form-control" name="title" placeholder="Enter Title">
+        </div>
+        <div class="form-group mb-4">
+            <label>Description</label>
+            <input type="text" class="form-control" name="description" placeholder="Enter Description">
+        </div>
+        <div class="form-group mb-4">
+            <label>Location</label>
+            <input type="text" class="form-control" name="location" placeholder="Enter Location">
+        </div>
+        <div class="form-group mb-4 row">
+            <label class="ml-3 mr-3">Category</label>
+            <div>
+                <p><input type="checkbox" name="pet_care">Pet Care</p>
+                <p><input type="checkbox" name="electrical">Electrical</p>
+                <p><input type="checkbox" name="garden">Garden</p>
+                <p>Other:<input type="text" name="other"></p>
+
+
+            </div>
+        </div>
+            <button class="btn btn-info mr-3 border-dark rounded text-dark text-right"><a href="/dashboard">Cancel</a></button>
+            <button type="submit" class="btn btn-primary text-right">Submit</button>
+
+    </form>
+</div>

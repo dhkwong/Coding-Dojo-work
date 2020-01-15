@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Hover In/Out</title>
+</head>
+
+<body>
+    <style>
+        img {
+            margin: 4px;
+        }
+
+        .ninja-container {
+            width: 50%;
+            height: auto;
+            vertical-align: middle;
+            margin: 10% 40%;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+
+            $("img").hover(function () {
+                var temp = $(this).attr('src');
+                $(this).attr("src","suitback.png")
+            },function () {
+                $(this).attr("src",$(this).attr('alt'));
+            });
+
+        });
+
+    </script>
+
+    <div class="ninja-container">
+
+        <img id="suit1" src="suit1.png" class="" alt="suit1.png" />
+        <img id="suit2" src="suit2.png" class="" alt="suit2.png" />
+        <img id="suit3" src="suit3.png" class="" alt="suit3.png" />
+        <img id="suit4" src="suit4.png" class="" alt="suit4.png" />
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,44 @@
+
+<div *ngIf="replyerrors">
+        <div *ngFor="let error of replyerrors">
+            {{error}}
+        </div>
+    </div>
+    
+    <div  *ngIf="customer">
+            <button class="btn btn-dark rounded m-2"><a class="text-white m-2" routerLink="/customers/{{customer.customer._id}}/edit">Edit {{customer.customer.name}}'s Profile</a></button>
+    <h3> {{customer.customer.name}}'s orders  </h3> 
+    <form class="m-3" (submit)="addOrder(addorder.value)" #addorder="ngForm">
+        Product Name<input class="form-control col-6" type="text" name="product" [ngModel]="newOrder.product" /><p></p>
+        Price<input class="form-control col-6" type="number" name="price" [ngModel]="newOrder.price" /><p></p>
+        Delivery Location<input class="form-control col-6" type="text" name="location" [ngModel]="newOrder.location"/><p></p>
+        Delivery Date <input class="form-control col-6" type="date" name="deliverydate" [ngModel]="newOrder.deliverydate" /><p></p>
+        <input class="btn btn-dark d-inline-block col-2" type="submit" value="Add Order" />
+
+    </form>
+  
+    <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Product name</th>
+                    <th scope="col">Delivery location</th>
+                    <th scope="col">Price of order</th>
+                    <th scope="col">Deliver by date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of customer.customer.orders">
+                    <td> {{order.product}}</td>
+                    <td> {{order.location}}</td>
+                    <td> ${{order.price}}</td>
+                    <td> {{order.deliverydate | date }}</td>
+                    <td><button (click)="deleteOrder(order._id)" class="btn btn-dark rounded m-2">Delete</button></td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+
+    <!--for loop through customer orders here-->
+    </div>

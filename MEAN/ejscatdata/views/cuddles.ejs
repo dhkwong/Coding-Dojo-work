@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<h1>Details page for <%=content.name%></h1>
+
+<img src="<%=content.image%>">
+
+<h4>favorite food: <%=content.food%></h4>
+
+<h5>Age: <%= content.age %></h5>
+<h3>Sleeping spots:</h3>
+<% for (var spot of content.sleepingspots) { %>
+    <h3><%= spot %></h3>
+<% } %>
+
+<form action='/users' method='post'>
+    Name: <input type='text' name='name'>
+    Email: <input type='text' name='email'>
+    <button>Add User</button>
+</form>

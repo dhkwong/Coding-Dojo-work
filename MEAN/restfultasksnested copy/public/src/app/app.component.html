@@ -1,0 +1,39 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="container-fluid text-center">
+<!-- <div class="container ">
+  <div *ngIf='task'>{{ task.description }} {{task._id}}</div>
+</div> -->
+<app-task *ngIf="task" [taskToShow]="task"></app-task>
+<form (submit)="onSubmit()">
+      <h4>Create a new task!</h4>
+  <!-- use the json pipe to see how newTask changes in real time -->
+  <!--     <p> {{ newTask | json }} </p> -->
+  <input type="text" name="newTask.title" [(ngModel)]="newTask.title" />
+  <input type="text" name="newTask.description" [(ngModel)]="newTask.description" />
+  <input type="submit" value="Create Task" />
+</form>
+
+
+<button (click)="onButtonClick()">Get all tasks</button>
+<div class="card text-center" style="width: 40%;margin-left: 30%;" *ngFor="let task1 of tasks">
+  <h2 class="card-title"> {{ task1.title }}</h2>
+  <button (click)="taskToShow(task1)">Show</button>
+  <button (click)="toggle(task1)" id="toggleedit">edit</button>
+  <button (click)="delete(task1)" id="delete">delete</button>
+
+
+</div>
+<ng-container *ngIf="show">
+
+  <form (submit)="onEdit(task)">
+    <!-- use the json pipe to see how newTask changes in real time -->
+    <input type="text" name="task.title" [(ngModel)]="task.title" />
+    <input type="text" name="task.description" [(ngModel)]="task.description" />
+    <input type="submit" value="Edit Task" />
+  </form>
+</ng-container>
+</div>
+
+
+<router-outlet></router-outlet>

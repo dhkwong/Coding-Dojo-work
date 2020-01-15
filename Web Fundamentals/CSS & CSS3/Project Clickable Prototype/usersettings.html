@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>userclock</title>
+    <link rel="stylesheet" type="text/css" href="usersettings.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="navbar">
+            <button class="btn btn-basic" type="button">Clock In/Out</button>
+            <button class="btn btn-basic" type="button">Points</button>
+            <button class="btn btn-basic" type="button">Daily Report</button>
+            <button class="btn btn-info" type="button">Settings</button>
+            <button class="btn btn-basic" type="button">Log Out</button>
+
+        </div>
+        <div class="sidebar">
+            <div class="name">
+                <img src="https://dogtime.com/assets/uploads/2011/03/puppy-development.jpg" alt="puppy-development">
+                <span class="inline">
+                    <h1>text</h1>
+                    <p><a href=""><img class="inline"
+                                src="https://cdn2.iconfinder.com/data/icons/pittogrammi/142/61-512.png" alt="eye"></a>
+                        text</p>
+                </span>
+
+            </div>
+            <div class="card">
+
+                <div class="card-body">
+                    <h5 class="card-title">09:15 AM | 05 May 2018</h5>
+                    <a href="#" class="btn btn-primary input-block-level form-control">Clock In</a>
+
+                </div>
+                <!-- MODAL LOGIC HERE!!! -->
+                <!-- Button trigger modal -->
+                <a class="text-left ml-4 text-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Forgot to Clock Out Yesterday?
+                </a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-body">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">09:15 AM | 05 May 2018</h5>
+                                    <a href="#" class="btn btn-danger input-block-level form-control">Clock In</a>
+                                    <select class="input-block-level form-control mt-3">
+                                        <option value="current-time">May 4, 2018 -5:30 PM </option>
+                                    </select>
+                                    <input type="text" placeholder="Task Description (e.g Completed wireframes)"
+                                        class="form-control p-5 mt-3" id="inputGroup-sizing-lg"></input>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MODAL LOGIC -->
+            </div>
+            <div class="sidebar-bottom">
+                <h1 class="text-center text-danger mt-3">My Points<p>95</p>
+                </h1>
+
+                <h1 class="text-center text-success">Village Points<p>95</p>
+                </h1>
+                <p class="text-center">Happiness lies not in the mere pssession of money; it lies in the joy of
+                    achievement, in the thrill
+                    of creative effort. -Franklin Roosevelt</p>
+            </div>
+        </div>
+        <div id="content-wrapper">
+            <!--Start Content Here!!!-->
+            <h1 class="ml-4 mt-3">Reset Password</h1>
+            <p class="font-weight-bold ml-5 mt-3">Previous Password <input type="text"
+                    placeholder="Previous Password Here" class="ml-3 mt-3 input-block-level col-7"></input></p>
+
+            <p class="font-weight-bold ml-5 mt-3">New Password<input type="text" placeholder="New Password Here"
+                    class="ml-5 mt-3 input-block-level col-7"></input></p>
+            <p class="font-weight-bold ml-5 mt-3">Confirm Password<input type="text" placeholder="Confirm Password Here"
+                    class="ml-3 mt-3 input-block-level col-7"></input></p>
+            <button class="btn-danger offcenter mt-3">Reset Password</button>
+
+            <h1 class="ml-4 mt-5">Update Timezone</h1>
+            <p class="font-weight-bold ml-5 mt-3">Your Timezone <select
+                    class="ml-4 mt-3 input-block-level col-7 time-range  mb-5">
+                    <option value="gmt8">GMT +8, Taipei, Hongkong, Singapore</option>
+                    <option value="anothertime">another time</option>
+                    <option value="anothertime">another time</option>
+                    <option value="anothertime">another time</option>
+                </select></p>
+                <button class="btn-danger offcenter">Set Timezone</button>
+
+        </div>
+
+
+
+
+
+
+    </div>
+    <!-- Javascript for bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+
+
+</html>

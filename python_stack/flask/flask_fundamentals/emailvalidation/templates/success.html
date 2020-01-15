@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title></title>
+</head>
+
+<body>
+
+    <div class="container-fluid  text-center ">
+        <div class="text-dark text-center bg-success" style="width: 60%; margin-left: 20%; {{session['valid']}}">
+
+            {% with messages = get_flashed_messages() %}     
+            <!-- declare a variable called messages -->
+            {% if messages %}                            
+            <!-- check if there are any messages -->
+            {% for message in messages %}            
+            <!-- loop through the messages -->
+                <p>{{message}}</p>                   
+            <!-- display each message in a paragraph tag -->
+                    {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+
+        <h1>Email Addresses Entered:</h1>
+        <hr>
+        <div class="container-fluid center" style="margin-left: 22%">
+            {% for email in emails %}
+            <div class="col-md-6 mr-4">Email: {{email['email']}}<span class="col-md-6 ml-5">  Created At: {{email['created_at']}}</span></div>
+            
+
+
+            {% endfor %}
+            <a class="nav-link" href="/">
+                <div class="col-md-3"><input class="btn btn-outline-success my-2 my-sm-0 float-right" type="button"
+                        value="Back"></div>
+            </a>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

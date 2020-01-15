@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <div class="container center-block text-center mt-4">
+        <div class=" border border-dark centered mb-4" style="height: 80px;">
+            <h4>Random Word (attempt #: {{request.session.counter}}) </h4>
+    
+        </div>
+    
+        <div class="border center-block border-dark" style="height: 120px">
+           
+              <h1> {{randomnum}} </h1>
+            
+    
+        </div>
+    
+    </div>
+    <div class="container-fluid mt-4 text-center"> 
+    <button class="text-center" onclick="window.location.href = '/generate';">Generate</button>
+    </div>
+
+</body>

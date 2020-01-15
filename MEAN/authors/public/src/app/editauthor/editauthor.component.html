@@ -1,0 +1,16 @@
+
+
+<p>Edit an author here</p>
+
+<div *ngIf="replyerrors">
+    <div *ngFor="let error of replyerrors">
+        {{error}}
+    </div>
+</div>
+
+<form (submit)="editAuthor(editauthor.value)" #editauthor="ngForm">
+    <input type="text" name="name" [ngModel]="author?.name"/>
+    <input type="submit" value="Edit Author"/>
+</form>
+
+<a href="/">home</a>

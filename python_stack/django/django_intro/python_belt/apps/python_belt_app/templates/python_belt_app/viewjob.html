@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title></title>
+</head>
+
+<div class="container-fluid ml-2 row">
+    <div class="col-10">
+        <!--header-->
+        <h3>Hello {{user.first_name}}! These are the job details!</h3>
+    </div>
+    <a href="/dashboard">Dashboard</a>
+    <a class="text-right ml-3" href="/logout">Log out</a>
+
+</div>
+
+<div class="container-fluid ml-2 mt-4 row">
+    <div class="col-10">
+        <h4>{{job.title}}</h4>
+    </div>
+
+    <div class="border border-dark rounded col-5 m-3 pull-right p-4">
+        <h5>{{job.description}}</h5>
+        <h5>Location: {{job.location}}</h5>
+        <h5>Posted by:{{job.submitted_by.first_name}}</h5>
+        <h5>Posted on: {{job.created_at}}</h5>
+
+        Categories: {%for category in job.categories.all%}
+            {{category.category_name}}
+        {%endfor%}
+
+    </div>
+    
+</div>
+
+{% if not user == job.submitted_by %}
+<h5 class="ml-5"><a href="/startjob/{{job.id}}">Add to my jobs</a></h5>
+{%endif%}

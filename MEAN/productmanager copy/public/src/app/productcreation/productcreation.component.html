@@ -1,0 +1,11 @@
+<p>productcreation works!</p>
+<form (submit)="submitProduct()">
+        <h4>Create a new Product!</h4>
+    <!-- use the json pipe to see how newTask changes in real time -->
+        <p> {{ newProduct | json }} </p>
+    <input type="text" name="title" [(ngModel)]="newProduct.title" placeholder="Title Here" />
+    <input type="number" name="price" [(ngModel)]="newProduct.price" placeholder="Price Here" />
+    <input type="text" name="image" [(ngModel)]="newProduct.image" placeholder="Image URL Here" />
+
+    <input type="submit" value="Add Product" />
+</form>

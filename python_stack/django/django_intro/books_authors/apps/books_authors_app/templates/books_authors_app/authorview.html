@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+</head>
+
+<div class="container-fluid">
+    <h1>{{authors.name}}</h1>
+    <h5>ID: {{authors.id}}</h5>
+    <h5 class="inline-block"> Description: <span>
+            <h6 class="inline-block">{{authors.notes}}</h6>
+        </span></h5>
+</div>
+
+
+<ul>
+    <h6>Books:</h6>
+    {%for books in authors.books.all%}
+    <li><em>{{books.title}}</em></li>
+    {%endfor%}
+</ul>
+
+
+
+<form action="/addbooktoauthor/{{authors.id}}" method="post">
+    {% csrf_token %}
+    <select name="bookid">
+        {%for books in book.all%}
+        <option value="{{books.id}}">{{books.title}}</option>
+        {%endfor%}
+    </select>
+    <input type="submit" value="Select">
+</form>

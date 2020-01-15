@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title></title>
+</head>
+<div class="container-fluid text-right"><a
+        href="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/templates/photoproject_app/profile.html">Normal
+        View</a> | <a
+        href="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/templates/photoproject_app/index.html">Logout</a>
+</div>
+<nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light ">
+
+
+    <div class="container-fluid collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto w-100 bg-dark rounded">
+
+            <li class="nav-item active w-50 border border-dark text-center rounded ">
+                <a class="nav-link text-white underline"
+                    href="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/templates/photoproject_app/editprofile.html">Edit
+                    My Profile <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item w-50 border border-dark text-center rounded">
+                <a class="nav-link text-white"
+                    href="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/templates/photoproject_app/editphotos.html">Edit
+                    Photos</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<div class="container col-12 row mt-3 ">
+    <!--description and profile pic div-->
+    <div class="container-fluid pl-4 border border-dark rounded col-5 ml-5 mr-3">
+        <h4 class="mt-3">Daryl Kwong</h4>
+        <hr>
+        <h6 class="mt-5">Description</h6>
+        <form>
+            <textarea class="form-control rounded" rows="5" placeholder="Autofill with current description"></textarea>
+            <button class="btn btn-dark">Update Description</button>
+        </form>
+
+    </div>
+    <div class="container fluid h-75 col-6 text-right border border-dark rounded">
+        <img src="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/static/photoproject_app/images/profile.jpg"
+            alt="profile pic" class="img-fluid rounded" />
+        <input type="text" class="form-control rounded mt-2" placeholder="Upload New Profile Picture">
+
+    </div>
+</div>
+<div class="container-fluid col-11 border border-dark rounded mt-3 pt-2 pb-1">
+    <h4>Photography Preferences</h4>
+    <hr>
+    <form class="container-fluid">
+        <input type="text" class="form-control col-10 rounded mb-2" placeholder="Autofill with Photography Preferences">
+        <button type="submit" class="button btn-dark rounded mb-2">Submit</button>
+    </form>
+</div>
+<div class="container-fluid col-11 border border-dark bg-dark text-white mt-4">
+    <h5>Contact Me</h5>
+    Email: Email@email.com
+    <div class="container-fluid row text-center p-2">
+        <h5>External links: </h5>
+        Facebook | Instagram
+    </div>
+
+</div>

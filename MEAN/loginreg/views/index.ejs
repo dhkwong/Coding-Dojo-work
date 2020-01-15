@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title></title>
+</head>
+
+<body>
+
+    <div class="container-fluid center bg.info">
+           <h3>Welcome: <%= user.firstname%></h3>
+        <%- JSON.stringify(messages) %>
+        <!-- based on the structure of your messages, determine how to display them -->
+        <% if(messages.registration) { %>
+        <% for (var x of messages.registration) { %>
+        <h3><%= x %></h3>
+        <% } %>
+        <% } %>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<div class="col-9 ml-5 mt-3">
+    <h1>Edit Show {{show.id}}</h1>
+    {%for message in messages%}
+        <p>{{message}}</p>
+    {%endfor%}
+
+    <form action="/editingshow/{{show.id}}" class="ml-3" method="post">
+        {%csrf_token%}
+        <div class="row col-9 mt-4">
+            <h6>Title</h6>
+            <input class="form-control" type="text" name="title">
+            <div class="mt-4">
+                <h6>Network</h6>
+                <input class="form-control " type="text" name="network">
+            </div>
+            <div class="mt-4 ml-5">
+                <h6>Release Date</h6>
+                <input class="form-control " type="date" name="date">
+            </div>
+        </div>
+        <div class="mt-4">
+            <h6>Description</h6>
+            <textarea class="form-control w-50" rows="6" type="text" name="description"></textarea>
+        </div>
+
+        <button class="button btn-clear mt-4 border rounded" type="submit"> Update </button>
+    </form>
+
+    <a href="/shows/{{show.id}}">Go to Show</a>
+
+</div>

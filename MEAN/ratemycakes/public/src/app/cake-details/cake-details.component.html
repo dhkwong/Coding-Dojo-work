@@ -1,0 +1,11 @@
+<div class="card col-9">
+        <div class="card-title col-8">Baked by {{childcake.baker}}</div>
+       
+        <img class="w-75" [src]=childcake.image />
+        <div *ngFor="let i of childcake.ratings">
+        rating {{i["rating"]}}
+        Description: {{i["description"]}} 
+      </div>
+        {{childcake.avg}}
+     
+</div>

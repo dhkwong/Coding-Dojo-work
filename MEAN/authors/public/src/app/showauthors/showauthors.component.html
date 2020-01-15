@@ -1,0 +1,27 @@
+<p>showauthors works!</p>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<div class="inline border border-dark rounded text-center">
+    all authors here
+<a href="/new">Add an Author!</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Author</th>
+                <th scope="col">Actions Available</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let author of authors">
+                <td>{{author.name}}</td>
+                <td>edit/delete</td>
+                <button><a [routerLink]="['/edit',author._id]">Edit this Author!</a></button>
+                <button (click)="deleteAuthor(author)" id="toggleedit"><img class="w-75"/>Delete</button>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+

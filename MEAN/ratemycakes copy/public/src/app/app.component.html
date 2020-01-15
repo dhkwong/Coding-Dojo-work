@@ -1,0 +1,63 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="container-fluid text-left">
+
+  <form (submit)="onSubmit()">
+        <h4>Create a new Cake!</h4>
+    <!-- use the json pipe to see how newTask changes in real time -->
+        <p> {{ newCake | json }} </p>
+    <input type="text" name="newCake.baker" [(ngModel)]="newCake.baker" placeholder="Baker Here" />
+    <p></p>
+    <input type="text" name="newCake.image" [(ngModel)]="newCake.image" placeholder="image link here" />
+    <input type="submit" value="Create Cake" />
+  </form>
+
+  <div *ngFor="let cake1 of cakes">
+    <div class="card col-4 m-2"> {{cake1.baker}}
+      <div class="col-9">
+
+        <button (click)="toggle(cake1)" id="toggleedit"><img class="w-75" [src]=cake1.image /></button>
+        <form (submit)="submitReview(cake1, editreview)" #editreview="ngForm">
+              <h4>Submit a Review!</h4>
+              <p> {{ newReview | json }} </p>
+          Rating <select name="rating" [ngModel]="newReview.rating">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+
+          <input type="text" name="description" [ngModel]="newReview.description" placeholder="Description Here" />
+          <input type="submit" value="Create Review" />
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+  <app-cake-details *ngIf="cake" [childcake]="cake"></app-cake-details><!--blue is child variable, orange is parent passed into child-->
+  <!-- <div class="card col-8" *ngIf="cake">
+    <div class="card-title">Baked by {{cake.baker}}</div>
+   
+    <img class="w-75" [src]=cake.image />
+    <div *ngFor="let i of cake.ratings">
+    rating {{i["rating"]}}
+    Description: {{i["description"]}} 
+  </div>
+    {{this.cakeavg}}
+ 
+  </div> -->
+
+
+
+  <router-outlet></router-outlet>

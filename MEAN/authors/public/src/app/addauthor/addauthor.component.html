@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<p>Add an author here!</p>
+<a href="/">Home</a>
+<div *ngIf="replyerrors">
+    <div *ngFor="let error of replyerrors">
+        {{error}}
+    </div>
+
+</div>
+<form (submit)="submitAuthor()">
+        <h4>Create a new Author!</h4>
+    <!-- use the json pipe to see how newTask changes in real time -->
+        <p> {{ newAuthor | json }} </p>
+    <input type="text" name="name" [(ngModel)]="newAuthor.name" placeholder="NameHere" />
+
+    <input type="submit" value="Create Author" />
+</form>

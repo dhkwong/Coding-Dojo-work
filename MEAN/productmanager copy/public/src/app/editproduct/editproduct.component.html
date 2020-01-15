@@ -1,0 +1,12 @@
+<p>editproduct works!</p>
+<div *ngIf="replyerrors">
+        <div *ngFor="let error of replyerrors">
+            {{error}}
+        </div>
+    </div>
+<form (submit)="editProduct(editproduct.value)" #editproduct="ngForm"> <!--editproduct's .value passes in just the form values and not the entire form-->
+        <input type="text" name="title" [ngModel]="product?.title"/>
+        <input type="number" name="price" [ngModel]="product?.price" />
+        <input type="text" name="image" [ngModel]="product?.image" />
+        <input type="submit" value="Edit Product"/>
+    </form>

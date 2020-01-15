@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title></title>
+</head>
+
+<div class="container-fluid text-right"><a
+        href="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/templates/photoproject_app/profile.html">Normal
+        View</a> | <a
+        href="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/templates/photoproject_app/index.html">Logout</a>
+    <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-light ">
+
+
+        <div class="container-fluid collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto w-100 bg-dark rounded">
+
+                <li class="nav-item active w-50 border border-dark text-center rounded ">
+                    <a class="nav-link text-white underline"
+                        href="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/templates/photoproject_app/editprofile.html">Edit
+                        My Profile <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item w-50 border border-dark text-center rounded">
+                    <a class="nav-link text-white"
+                        href="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/templates/photoproject_app/editphotos.html">Edit
+                        Photos</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid col-12 row ml-4 pt-3 pl-5">
+
+        <div class="card col-5 ml-4 mb-3 border-dark">
+
+            <div class="card-body text-left p-2">
+                <h4 class="card-title p-2">Picture Title</h4>
+                <input type="text" class="border border-dark rounded col-6 m-2" value="upload picture">
+                <input type="text" class="rounded col-6 m-2" value="Photo location">
+                <br>
+
+                <textarea class="rounded col-10 m-2" rows="4">Write your photo description here!</textarea>
+                <p></p>
+                <a href="#" class="btn btn-dark">Submit</a>
+                <a href="#" class="btn btn-secondary">Cancel</a>
+            </div>
+        </div>
+
+
+        <div class="card col-5 ml-4 mb-3 border-dark">
+
+            <div class="card-body">
+                <h4 class="card-title">Picture Title</h4>
+                <img class="img-fluid rounded"
+                    src="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/static/photoproject_app/images/seattle.jpg">
+                <img class="img-fluid col-5 rounded mt-3 mb-3"
+                    src="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/static/photoproject_app/images/location.png">
+                <input type="text" class="rounded col-6 m-1" value="input new location">
+                <br>
+
+                <textarea class="rounded col-11" rows="4">Autofill with Description</textarea>
+                <p></p>
+                <a href="#" class="btn btn-dark">Submit</a>
+                <a href="#" class="btn btn-secondary">Delete</a>
+            </div>
+        </div>
+
+
+        <div class="card col-5 ml-4 mb-3 border-dark">
+
+            <div class="card-body">
+                <h4 class="card-title">Picture Title</h4>
+                <img class="img-fluid rounded"
+                    src="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/static/photoproject_app/images/cratelake.jpg">
+                <img class="img-fluid col-5 rounded mt-3 mb-3"
+                    src="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/static/photoproject_app/images/location.png">
+                <input type="text" class="rounded col-6 m-1" value="input new location">
+                <br>
+
+                <textarea class="rounded col-11" rows="4">Autofill with Description</textarea>
+                <p></p>
+                <a href="#" class="btn btn-dark">Submit</a>
+                <a href="#" class="btn btn-secondary">Delete</a>
+            </div>
+        </div>
+
+        <div class="card col-5 ml-4 mb-3 border-dark">
+
+            <div class="card-body">
+                <h4 class="card-title">Picture Title</h4>
+                <img class="img-fluid rounded"
+                    src="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/static/photoproject_app/images/hk.JPG">
+                <img class="img-fluid col-5 rounded mt-3 mb-3"
+                    src="/Users/darylkwong/Desktop/Coding-Dojo/CodingDojo Practice/python_stack/django/django_intro/photoproject/apps/photoproject_app/static/photoproject_app/images/location.png">
+                <input type="text" class="rounded col-6 m-1" value="input new location">
+                <br>
+
+                <textarea class="rounded col-11" rows="4">Autofill with Description</textarea>
+                <p></p>
+                <a href="#" class="btn btn-dark">Submit</a>
+                <a href="#" class="btn btn-secondary">Delete</a>
+            </div>
+        </div>
+    </div>

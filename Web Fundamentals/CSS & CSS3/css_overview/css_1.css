@@ -1,0 +1,26 @@
+p{
+	color:blue;
+	font-family: monospace, "helvetica neue", arial, verdana, sans-serif;/*goes left to right till it finds a font that works*/
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#important{
+	font-size:36px;
+	font-style: italic;
+	width: 100%;
+	overflow: scroll;
+	border: 3px dotted green
+
+
+}
+.info{
+	background-color: green;
+	border:1px solid black;
+	border-right: 7px groove rgb(100,100,100);
+    border-left: 7px groove rgb(200,200,200);
+    border-radius: 7px;
+    text-align: left;
+
+}

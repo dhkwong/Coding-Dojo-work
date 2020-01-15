@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title></title>
+</head>
+
+<body>
+    <div class="container-fluid center bg.info">
+        <form action="/addpost" method="POST">
+
+            Name:<br><input type="text" name="postname" placeholder="name"><br>
+            Post:<br><input type="text" name="postcomment" placeholder="post"><br>
+            <input type="submit" value="Submit Post">
+
+        </form>
+        <ul>
+            <% for(var post in posts) {%>
+
+            <li><h4>Name:<%= posts[post].name%></h4></li>
+            <h4>Post:<%= posts[post].content%></h4>
+
+            <p><%for(var comment in  posts[post].comments){%></p>
+            <p><h5>Commenter:<%= posts[post].comments[comment].name%></h5></p>
+            <p><h6>Comment:<%= posts[post].comments[comment].content%></h6></p>
+            
+            <%}%>
+
+                
+           
+            <form action="/addcomment/<%= posts[post]._id%>" method="POST">
+
+            Name:<br><input type="text" name="commentname" placeholder="Comment"><br>
+            Comment:<br><input type="text" name="commentcomment" placeholder="Comment"><br>
+            <input type="submit" value="Submit Comment">
+
+            </form>
+            <hr>
+
+            <% } %>
+        </ul>
+
+    </div>
+
+
+
+</body>
+
+</html>

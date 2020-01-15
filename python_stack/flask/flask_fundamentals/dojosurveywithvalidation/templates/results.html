@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title></title>
+</head>
+
+<body>
+
+    <div class="container-fluid ">
+        {% for user in user %}
+        <div class="col-md-6">Name: {{user['name']}}</div>
+        <div class="col-md-6">Dojo Location: {{user['location']}}</div>
+        <div class="col-md-6">Favorite Language: {{user['language']}}</div>
+        <div class="col-md-6">Comments: {{user['comment']}}</div>
+        <a class="nav-link" href="/">
+
+            {% endfor %}
+        <div class="col-md-3"><input class="btn btn-outline-success my-2 my-sm-0 float-right" type="button"
+                value="Back"></div>
+        </a>
+    </div>
+
+
+
+</body>
+
+</html>

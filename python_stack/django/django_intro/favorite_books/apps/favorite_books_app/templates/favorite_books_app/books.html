@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title></title>
+</head>
+
+<div class="container-fluid ml-5 row">
+    <div class="col-10">
+        <!--header-->
+        <h1>Success! Welcome, {{user.first_name}}</h1>
+    </div>
+    <a class="text-right ml-3" href="/logout">Log out</a>
+    <form class="col-4 m-3 pull-right" action="/addbook" method="POST">
+        {%for message in messages%}
+        <p>{{message}}</p>
+        {%endfor%}
+        {%csrf_token%}
+        <h5>Add a Favorite Book</h5>
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" name="title" placeholder="Enter Title">
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input type="text" class="form-control" name="description" placeholder="Enter Description">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div class="col-5 ml-2 mt-3 text-center">
+        {%for book in books%}
+        <div class="border border-dark">
+            <a href="/books/{{book.id}}">{{book.title}}</a>
+            <p>Added by {{book.uploaded_by.first_name}} {{book.uploaded_by.last_name}}</p>
+            {%if not user  in book.users_who_like.all %}
+            <a class="" href="/addfavorite/{{book.id}}">Add to Favorites</a>
+            {%else%}
+            <h6 class="">You've favorited this book</h6>
+            {%endif%}
+        </div>
+        {%endfor%}
+    </div>
+
+
+</div>

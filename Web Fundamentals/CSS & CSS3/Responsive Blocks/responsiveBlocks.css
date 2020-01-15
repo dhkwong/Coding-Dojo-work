@@ -1,0 +1,99 @@
+/*CSS reset settings here*/
+*{
+    margin: 5px;
+    padding: 0px;
+    
+    
+    
+}
+   #wrapper{
+    width: 1000px;
+    margin: 0px auto;
+    padding-top: 20px;
+   
+    
+   }
+   #header{
+    min-height: 150px;
+    background-color: green;
+    margin: 20px;
+   }
+   .navcontent-wrapper{
+       display: inline-block;
+       width: 950px;
+       height: 700px;
+       border: solid red;
+   }
+   #navigation{
+    min-height: 300px;
+    width: 150px;
+    background-color: blue;
+    margin: 20px;
+    margin-top: 5px;
+    padding-left: 20px;
+    display: inline-block;
+    vertical-align: top;
+   }
+   #content-adwrapper{
+       min-height: 380px;
+       width: 98%;
+   }
+   #main_content{
+    min-height: 400px;
+    width: 750px;
+    background-color: red;
+    display: inline-block;
+    vertical-align: top;
+   }
+   .subcontents{
+    min-height: 200px;
+    width: 210px;
+    background-color: yellow;
+    display: inline-block;
+    margin: 10px;
+   }
+   #advertisement{
+    min-height: 120px;
+    width: 93%;
+    background-color: purple;
+    margin: 10px;
+   }
+   
+@media only screen and (max-width: 500px){ /*phone*/
+    #header{
+        width: 73%;
+    }
+    .subcontents{
+        width:93%;
+    }
+    #advertisement{
+        width:93%;
+    }
+    #navigation{
+        display: none;
+    }
+
+}
+@media only screen and (min-width: 501px ) and (max-width : 1024px){ /*tablet*/
+    #header{
+        width: 61%;
+        margin-left: 0;
+    }
+    #navigation{
+        display: none;
+    }
+    #main_content{
+        width: 60%;
+    }
+    #content-adwrapper{
+        width: 90%;
+    }
+
+    #advertisement{
+        width:93%;
+    }
+}
+/* @media only screen and (min-width: 1024px){
+
+
+} */

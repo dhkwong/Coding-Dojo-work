@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<div class="container-fluid inline-block">
+    <div class="col-4 text-left inline">
+        <h1> Add an Author </h1>
+
+        <form action="/createauthor" method="post">
+            {% csrf_token %}
+            First Name:<input class="mb-3 ml-3" type="text" name="inputfirstname"><br>
+            Last Name:<input type="text" name="inputlastname"><br>
+            Notes (optional):<input type="text" name="inputnotes"><br>
+            <button class="mt-3" type="submit">Add</button>
+        </form>
+
+    </div>
+    <div class="col-5 inline">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {%for author in authors%}
+
+                <tr>
+                    <th scope="row">{{author.id}}</th>
+                    <td>{{author.first_name}} {{author.last_name}}</td>
+                    <td><a href="/authorview/{{author.id}}">View</a></td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</div>

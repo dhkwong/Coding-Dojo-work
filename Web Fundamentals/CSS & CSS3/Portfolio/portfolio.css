@@ -1,0 +1,136 @@
+*{
+ margin: 0px;
+ padding: 0px;
+}
+
+#header{
+	padding: 20px;
+	background-color: #F5F5F5; /*html whitesmoke*/
+	font-size: 30px;
+	color: black; 
+	vertical-align: top;
+
+}
+#container{
+	background: linear-gradient(to bottom, #3c1053 0%, #ad5389 100%);
+	min-height: 1080px;
+}
+#title{
+	width: 950px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	display: inline-block;
+}
+
+#right-title{
+	font-family: arial;
+	text-align: right;	
+	font-size: 30px;
+}
+
+#about-wrapper{
+	display: inline-block;
+	min-height: 110px;
+	width: 800px;
+	background-color: green;
+	vertical-align: top;
+	margin: 20px;
+
+}
+#about{
+	 font-family: arial, sans-serif;
+	 min-height: 410px;
+	 font-size: 20px;
+	 background-color: #2f4353;
+	 background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
+	 display: inline-block;
+	 padding:20px;
+	 vertical-align: top;
+}
+#about-title{
+	 
+	 font-family: arial, sans-serif;
+	 height: 40px;
+	 background-color: #d3d3d3;
+	 background-image: linear-gradient(315deg, #d3d3d3 0%, #7f8c8d 74%);
+	 font-size: 30px;
+	 color: white;
+	 text-align: left;
+	 padding: 10px;
+	 vertical-align: top;
+
+}
+#content-title{
+	 height: 40px;
+	 width: 455px;
+	 background-color: #d3d3d3;
+	 background-image: linear-gradient(315deg, #d3d3d3 0%, #7f8c8d 74%);
+	 padding-top: 20px;
+}
+#content{
+	font-family: arial, sans-serif;
+	 min-height: 480px;
+	 width: 455px;
+	 background-color: green;
+	 margin: 20px;
+	 display: inline-block;
+	 vertical-align: top
+
+}
+#mid-content{
+	 font-family: arial, sans-serif;
+	 font-size: 18px;
+	 text-align: left;
+	 height: 250px;
+	 width: 4105x;
+	 background-color: #2f4353;
+	 background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
+	 padding: 20px;
+	 
+}
+#technologies{
+	display: inline-block;
+	height: 300px;
+	width:455px;
+	background-color: #2f4353;
+	background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
+
+}
+#bottom-content{
+	 height: 300px;
+	 width: 300px;
+	 background-color: green;
+}
+#profile-pic{
+	display: inline-block;
+	margin: 20px;
+}
+.img{
+	background: grey;
+	padding: 5px;
+
+	
+}
+.techimage{
+	padding: 6px;
+	height: 70px;
+	width: 70px;
+}
+.contentimage{
+	width: 455px;
+	height: 250px;
+	vertical-align: top;
+}
+.center{
+	text-align: center;
+	
+}	
+button{
+	border-radius: 7px;
+	background-color: green;
+	border: 3px solid black;
+	padding: 5px;
+
+}
+

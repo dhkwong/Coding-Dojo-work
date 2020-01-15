@@ -1,0 +1,74 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<body class="row">
+
+    <div class="col-3 bg-info m-2 text-center pt-5" style="height: 300px; width: 400px; ">
+        <div id="q1" class="col-2 bg-info"><button>100</button></div>
+
+
+    </div>
+    <div class="col-3  bg-info m-2 text-center pt-5" style="height: 300px; width: 400px;">
+        <div id="q1" class="col-2 bg-info"><button>200</button></div>
+
+
+    </div>
+    <div class="col-3 bg-info m-2 text-center pt-5" style="height: 300px; width: 400px; ">
+        <div id="q1" class="col-2 bg-info"><button>200</button></div>
+    </div>
+
+    <div class="col-3 bg-info m-2 text-center pt-5" style="height: 300px; width: 400px; ">
+        <div id="q1" class="col-2 bg-info"><button>100</button></div>
+
+
+    </div>
+    <div class="col-3  bg-info m-2 text-center pt-5" style="height: 300px; width: 400px;">
+        <div id="q1" class="col-2 bg-info"><button>200</button></div>
+
+
+    </div>
+    <div class="col-3 bg-info m-2 text-center pt-5" style="height: 300px; width: 400px; ">
+        <div id="q1" class="col-2 bg-info"><button>200</button></div>
+    </div>
+    <div class="col-3 bg-info m-2 text-center pt-5" style="height: 300px; width: 400px; ">
+        <div id="q1" class="col-2 bg-info"><button>100</button></div>
+
+
+    </div>
+    <div class="col-3  bg-info m-2 text-center pt-5" style="height: 300px; width: 400px;">
+        <div id="q1" class="col-2 bg-info"><button>200</button></div>
+
+
+    </div>
+    <div class="col-3 bg-info m-2 text-center pt-5" style="height: 300px; width: 400px; ">
+        <div id="q1" class="col-2 bg-info"><button>200</button></div>
+    </div>
+
+</body>
+<script>
+
+
+    var counter = 0;
+
+    $(document).ready(function () {
+        console.log("q1");
+        // while (counter <= 10) {
+        $("button").click(function () {
+            var mybutton = this;
+            $.get("https://opentdb.com/api.php?amount=10", displayName)
+            // Notice that displayName is a function that takes in 1 parameter (this is the data that comes back from the API)
+            function displayName(data) {
+                console.log(data);
+                $(mybutton).parent().parent().html("<h6>" + data.results[counter].question + "</h6> <h6>" + data.results[counter].incorrect_answers + "," + data.results[counter].correct_answer + "</h6>");
+                if (counter < 11) {
+                    counter++;
+                }
+
+            }
+        })
+        // }
+    });
+
+</script>

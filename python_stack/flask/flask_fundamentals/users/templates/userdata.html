@@ -1,0 +1,9 @@
+{% for user in user: %}
+<h1>User {{user['id']}}</h1>
+<p>Full Name: {{user["first_name"]}} {{user["last_name"]}}</p>
+<p>Email: {{user["email"]}}</p>
+<p>Created On: {{user["created_at"]}}</p>
+<p>Last Updated On: {{user["updated_at"]}}</p>
+
+<a href="/users/{{user['id']}}/edit">edit</a>
+{%endfor%}

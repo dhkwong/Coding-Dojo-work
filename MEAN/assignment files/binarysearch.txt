@@ -1,0 +1,20 @@
+function binarysearch(arr,x){
+if(arr.length<0){
+return false
+}
+mid = arr.length/2
+
+if (arr[mid]==x){
+return true
+}
+
+if (arr[mid] > x){
+return binarysearch(arr.slice(0, mid-1)
+}
+else{
+return binarysearch(arr.slice(mid+1, arr.length-1)
+}
+
+
+
+}

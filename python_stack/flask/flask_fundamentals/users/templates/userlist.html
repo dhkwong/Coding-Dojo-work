@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            {% for user in users: %}
+            <td>{{user["id"]}}</td>
+            <td>Name: {{user["first_name"]}} {{user["last_name"]}}</td>
+            <td>Created At: {{user["created_at"]}}</td>
+            <td>Updated At: {{user["updated_at"]}}</td>
+            <td><a href="/users/{{user['id']}}">Show | </a> <!--show button routes to /users/{{user["user_id"]}}-->
+            <a href="/users/{{user['id']}}/edit">Edit | </a>
+            
+            <a href="/users/{{user['id']}}/delete">Delete</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+<a href="/users/new">Add a New User</td>

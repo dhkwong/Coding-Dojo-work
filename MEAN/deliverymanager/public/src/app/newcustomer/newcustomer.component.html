@@ -1,0 +1,16 @@
+
+
+<div *ngIf="replyerrors">
+    <div class="text-center" *ngFor="let error of replyerrors">
+        <h6>{{error}}</h6>
+    </div>
+</div>
+<form class=" col-11 text-center" (submit)="submitCustomer()">
+        <h4>Submit a New Customer</h4>
+
+    <p></p><input class="form-control" type="text" name="name" [(ngModel)]="newCustomer.name" placeholder="Name Here" />
+    <p></p><input class="form-control" type="text" name="company" [(ngModel)]="newCustomer.company" placeholder="Company Here" />
+    <p></p><input class="form-control" type="text" name="location" [(ngModel)]="newCustomer.location" placeholder="Location Here" />
+    <p></p><input class="form-control col-6 d-inline-block" type="submit" value="Create Customer" />
+    <a class="btn btn-dark rounded ml-2 col-4 d-inline-block" routerLink="/customers">Cancel</a>
+</form>

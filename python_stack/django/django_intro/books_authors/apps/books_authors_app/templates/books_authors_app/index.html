@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<div class="container-fluid inline-block">
+    <div class="col-4 text-left inline">
+        <h1> Add a Book </h1>
+        <form action="/addbook" method="post">
+            {% csrf_token %}
+            Book Title:<input class="mb-3 ml-3" type="text" name="inputtitle"><br>
+            Description:<input type="text" name="inputdescription"><br>
+            <button class="mt-3" type="submit">Add</button>
+        </form>
+
+    </div>
+    <div class="col-5 inline">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Action</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {%for books in book%}
+                
+                <tr>
+                    <th scope="row">{{books.id}}</th>
+                    <td>{{books.title}}</td>
+                    <td><a href="/books/{{books.id}}">View</a></td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
+
+</div>

@@ -1,0 +1,14 @@
+<p>productlist works!</p>
+<div *ngFor="let product of products">
+    <div class="col-9 m-1 border border-dark rounded">
+        Product:{{product.title}}
+        <p></p>
+        <img class="col-9" [src]="product.image">
+        <p></p>
+        Price:{{product.price}}
+        <button (click)="deleteProduct(product)" id="toggleedit"><img class="w-75"/>Delete</button>
+        <a class="btn btn-dark rounded" routerLink="/products/edit/{{product._id}}">Edit</a>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
