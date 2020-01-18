@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const notes = require('./../controllers/notes');
+router.post('/user', notes.createUser)
+      .get('/user', notes.getUsers)
 
 // router.get('/', notes.all)
 //     .get('/:id', notes.getOneById)

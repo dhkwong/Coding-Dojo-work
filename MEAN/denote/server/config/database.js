@@ -10,12 +10,14 @@
 //sql connection logic for table creations go here
 
 let mysql = require('mysql');
-let connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'denote-schema'
-});
+let config = require('../config/config.js');
+let connection = mysql.createConnection(config);
+// let connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'root',
+//     database: 'denote-schema'
+// });
 //alternatively to more manually handle the pool
 // var pool = mysql.createPool({
 //     connectionLimit: 5,
